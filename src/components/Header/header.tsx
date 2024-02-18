@@ -17,7 +17,7 @@ const Header = () => {
         <header className="bg-[#e3ebf0] flex flex-wrap md:flex-nowrap items-center justify-between w-full px-4 md:px-0 py-3 md:py-0">
             <div className="flex items-center justify-between w-full">
                 <div>
-                    <Image src={Logo} alt='Logo' width={150} height={150} />
+                    <Image src={Logo} alt='Logo' width={100} height={100} />
                 </div>
 
                 <div className="md:hidden flex flex-row-reverse gap-2">
