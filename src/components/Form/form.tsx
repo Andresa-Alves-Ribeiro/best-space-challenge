@@ -31,18 +31,22 @@ export default function Form() {
 
     const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setEditedName(event.target.value);
+        clearValidationError('name');
     };
 
     const handleGenderChange = (selectedOption: string) => {
         setSelectedGender(selectedOption);
+        clearValidationError('gender');
     };
 
     const handleEthnicityChange = (selectedOption: string) => {
         setSelectedEthnicity(selectedOption);
+        clearValidationError('ethnicity');
     };
 
     const handleMaritalStatusChange = (selectedOption: string) => {
         setSelectedMaritalStatus(selectedOption);
+        clearValidationError('maritalStatus');
     };
 
     const fetchData = () => {
@@ -56,13 +60,16 @@ export default function Form() {
         const validationResult = schema.safeParse(formData);
 
         if (!validationResult.success) {
-            toast.error('Preencha todos os seu dados corretamente antes de prosseguir');
+            toast.error('Preencha todos os seus dados corretamente antes de prosseguir');
             const errors: FormValidationErrors = {
                 fieldErrors: validationResult.error.flatten().fieldErrors
             };
             setValidationErrors(errors);
             return;
         }
+
+        // Limpa os erros quando a validação for bem-sucedida
+        setValidationErrors({ fieldErrors: {} });
 
         fetch('https://jsonplaceholder.typicode.com/todos')
             .then(response => response.json())
@@ -75,19 +82,29 @@ export default function Form() {
         console.log('Estado civil selecionado:', selectedMaritalStatus);
     };
 
+    const clearValidationError = (fieldName: string) => {
+        setValidationErrors(prevErrors => ({
+            ...prevErrors,
+            fieldErrors: {
+                ...prevErrors.fieldErrors,
+                [fieldName]: undefined
+            }
+        }));
+    };
+
     return (
         <div className="mt-96 max-md:mt-14 w-full mb-24 flex justify-center items-center" id='formulario'>
             <div className="w-full max-w-7xl">
                 <div className='flex flex-row max-md:flex-col'>
-                    <div className="w-3/6 max-md:w-full bg-violet-900 shadow-2xl border border-violet-900 p-20 rounded-tl-3xl rounded-bl-3xl max-md:rounded-3xl" style={{ maxHeight: '580px' }}>
-                        <h1 className='text-white text-xl pb-4 font-bold -mt-14'>Preencha os dados corretamente</h1>
+                    <div className="w-3/6 max-md:w-full bg-violet-900 shadow-2xl border border-violet-900 p-20 rounded-tl-3xl rounded-bl-3xl max-md:rounded-bl-none max-md:rounded-tr-3xl" style={{ maxHeight: '580px' }}>
+                        <h1 className='text-white text-xl pb-6 font-bold -mt-12'>Preencha os dados corretamente</h1>
                         <div>
                             <label className='text-white'>Nome:</label>
                             <Input
                                 disabled={false}
                                 size="lg"
                                 variant="outlined"
-                                className="w-6/6 max-md:w-1/2"
+                                className="w-6/6"
                                 value={editedName}
                                 onChange={handleNameChange}
                             />
@@ -143,7 +160,7 @@ export default function Form() {
                         </div>
                     </div>
 
-                    <div className='bg-slate-100 shadow-2xl border-2 border-violet-800 w-11/12 max-md:w-full rounded-tr-md rounded-br-md max-md:rounded-3xl overflow-y-auto overflow-x-hidden' style={{ maxHeight: '580px' }}>
+                    <div className='bg-slate-100 shadow-2xl border-2 border-violet-800 w-11/12 max-md:w-full rounded-tr-md rounded-br-md max-md:rounded-tr-none overflow-y-auto overflow-x-hidden' style={{ maxHeight: '580px' }}>
                         {data?.map((item, index) => (
                             <div key={index} className="py-6 pl-12 mb-4 rounded-lg border-b border-gray-200 backdrop-blur-md transform transition duration-300 hover:scale-105 hover:bg-violet-100">
                                 <p className="text-slate-600"><span className='font-bold text-violet-900 text-md'>UserID: </span>{item?.id}</p>
