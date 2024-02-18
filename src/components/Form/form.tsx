@@ -96,15 +96,15 @@ export default function Form() {
         <div className="mt-96 max-md:mt-14 w-full mb-24 flex justify-center items-center" id='formulario'>
             <div className="w-full max-w-7xl">
                 <div className='flex flex-row max-md:flex-col'>
-                    <div className="w-3/6 max-md:w-full bg-violet-900 shadow-2xl border border-violet-900 p-20 rounded-tl-3xl rounded-bl-3xl max-md:rounded-bl-none max-md:rounded-tr-3xl" style={{ maxHeight: '580px' }}>
+                    <div className="w-3/6 max-md:w-full bg-violet-900 shadow-2xl border border-violet-900 p-20 max-md:p-10 max-md:pt-20 rounded-tl-3xl rounded-bl-3xl max-md:rounded-bl-none max-md:rounded-tr-3xl" style={{ maxHeight: '580px' }}>
                         <h1 className='text-white text-xl pb-6 font-bold -mt-12'>Preencha os dados corretamente</h1>
-                        <div>
+                        <div className=''>
                             <label className='text-white'>Nome:</label>
                             <Input
                                 disabled={false}
                                 size="lg"
                                 variant="outlined"
-                                className="w-6/6"
+                                className="w-6/6 max-md:w-80"
                                 value={editedName}
                                 onChange={handleNameChange}
                             />
