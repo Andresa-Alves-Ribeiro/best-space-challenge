@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Imagem principal](./public/assets/thumb.png)
 
-## Getting Started
+# Projeto SendData Company
 
-First, run the development server:
+Este é o repositório do projeto SendData Company que consiste em uma aplicação interativa para envio de formulário com validações e recebimento de dados de uma API. Escolhi stacks front-end pensando em criar um visual responsivo de alta performance.
+
+A landing page é compatível com diversos tipos de resolução de telas, por exemplo: a. Desktop (1920px) b. Mobile (375px).
+
+![Home](./public/assets/Home.png)
+
+## 💻 Tecnologias utilizadas no projeto
+
+- [React.js](https://reactjs.org)
+- [Next](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org)
+- [Tailwind](https://sass-lang.com)
+- [Zod](https://zod.dev/)
+- [MaterialUI](https://mui.com/)
+- [Sonner](https://sonner.emilkowal.ski/)
+
+## 🗄️ Estrutura de pastas
+
+O projeto está estruturado da seguinte forma:
+
+- 📁 `public`
+    - 📁 `assets`
+- 📁 `src`
+  - 📁 `app`
+  - 📁 `assets`
+  - 📁 `components`
+    - 📁 `Footer`
+    - 📁 `Form`
+    - 📁 `Header`
+    - 📁 `Hero`
+    - 📁 `Select`
+  - 📁 `utils`
+
+## 🛠️ Instruções de execução
+
+Você pode abrir o seguinte deploy para visualizar o projeto:
+
+https://best-space-challenge.vercel.app/
+
+OU
+
+Siga as instruções abaixo para rodar o projeto em seu ambiente local:
+
+1. Certifique-se de ter o Node.js instalado em seu computador. Você pode baixar a versão mais recente do Node.js em https://nodejs.org.
+
+2. Clone este repositório em seu computador ou faça o download do código fonte.
+
+3. Abra o terminal e navegue até o diretório raiz do projeto.
+
+4. Instale as dependências do projeto executando o seguinte comando:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Após a conclusão da instalação das dependências, inicie o servidor de desenvolvimento local com o comando:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+6. O servidor local será iniciado e você poderá acessar o projeto no seu navegador através do seguinte endereço:
 
-## Learn More
+```bash
+  http://localhost:3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+Caso a porta 3000 estiver em uso, automaticamente o Next.js irá subir na próxima porta livre da máquina.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Se deseja alterar a porta padrão na qual a aplicação tentará subir, você pode modificar a porta no arquivo `next.config.js`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Agora você está pronto para explorar o projeto em seu ambiente local!
 
-## Deploy on Vercel
+## 👩‍💻 Autora
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<p>
+    <img align=left margin=10 width=80 src="https://avatars.githubusercontent.com/u/94997593?v=4"/>
+    <p>&nbsp&nbsp&nbspAndresa Alves<br>
+    &nbsp&nbsp&nbsp<a href="https://github.com/Andresa-Alves-Ribeiro">GitHub</a>&nbsp;|&nbsp;<a href="https://www.linkedin.com/in/andresa-alves-ribeiro/">Linkedin</a>&nbsp;|&nbsp</p>
+</p>
+<br/><br/>
+<p>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+Feito com ❤️ por [Andresa Alves](https://github.com/Andresa-Alves-Ribeiro) 😊
