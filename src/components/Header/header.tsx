@@ -24,7 +24,7 @@ const Header = () => {
                     <button onClick={toggleMenu}>
                         <FaBars />
                     </button>
-                    <div className={`md:hidden bg-violet-200 rounded-md p-4 ${showMenu ? 'block' : 'hidden'}`}>
+                    <div className={`md:hidden bg-violet-200 rounded-md px-4 py-2 ${showMenu ? 'block' : 'hidden'}`}>
                         <ul className="flex flex-col md:flex-row md:gap-6 md:mt-0">
                             <li className="py-2 md:py-0">
                                 <Link href='#hero' className="text-violet-800 hover:text-violet-500 hover:border-b-2 hover:border-violet-400">Home</Link>
