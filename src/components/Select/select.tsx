@@ -13,7 +13,7 @@ export default function SelectForm({ options, onChange }: OptionType) {
 
     return (
         <div className="mt-2">
-            <select onChange={handleSelectChange} className='h-10 w-80 rounded-md'>
+            <select onChange={handleSelectChange} className='h-10 w-full lg:w-80 rounded-md'>
                 <option value="">Selecione</option>
                 {options.map((option, index) => (
                     <option key={index} value={option}>{option}</option>
