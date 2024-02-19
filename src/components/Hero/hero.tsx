@@ -8,11 +8,11 @@ import { ReactTyped } from 'react-typed';
 
 export function Hero() {
     return (
-        <div className="pt-24 max-md:pt-6 h-full max-md:w-full">
+        <div className="pt-24 max-lg:pt-6 h-full max-lg:w-full">
             <div className="grid grid-cols-2">
-                <div className="max-md:flex max-md:flex-col max-md:items-center max-md:justify-center mb-4 pt-28 max-md:pt-0 pl-44 max-md:px-14 w-5/6 max-md:w-96">
-                    <ReactTyped strings={["Seus dados 100% seguros conosco"]} typeSpeed={50} className="font-bold text-3xl max-md:text-xl mb-8 max-md:mb-2 text-violet-900 cormorant-garamond-bold uppercase" />
-                    <p className='text-slate-500 text-center max-md:text-justify pt-8'>
+                <div className="max-lg:flex max-lg:flex-col max-lg:items-center max-lg:justify-center mb-4 pt-28 max-lg:pt-0 pl-44 max-lg:px-4 w-5/6 max-lg:w-screen">
+                    <ReactTyped strings={["Seus dados 100% seguros conosco"]} typeSpeed={50} className="font-bold text-3xl max-lg:text-xl mb-8 max-lg:mb-2 max-md:pl-8 text-violet-900 cormorant-garamond-bold uppercase" />
+                    <p className='text-slate-500 text-center max-lg:text-justify pt-8'>
                         Na SendData Company, a segurança e a privacidade dos dados dos usuários são nossa prioridade máxima. Trabalhamos incansavelmente para garantir a confiança e a satisfação de nossos clientes, proporcionando uma experiência segura e transparente em todas as interações com os dados dos usuários.
                     </p>
                 </div>
